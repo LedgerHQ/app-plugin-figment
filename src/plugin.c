@@ -1,6 +1,6 @@
 /*******************************************************************************
- *   Ethereum 2 Deposit Application
- *   (c) 2020 Ledger
+ *   Plugin Boilerplate
+ *   (c) 2023 Ledger
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -16,13 +16,8 @@
  ********************************************************************************/
 
 #include <stdint.h>
-#include "figment_plugin.h"
+#include "plugin.h"
 
-// List of selectors supported by this plugin.
-static const uint32_t FIGMENT_DEPOSIT_SELECTOR = 0x4f498c73;
-
-// Array of all the different selectors. Make sure this follows the same order as the
-// enum defined in `figment_plugin.h`
-const uint32_t FIGMENT_SELECTORS[NUM_SELECTORS] = {
-    FIGMENT_DEPOSIT_SELECTOR,
-};
+// This array will be automatically expanded to map all selector_t names with the correct value.
+// Do not modify !
+const uint32_t SELECTORS[SELECTOR_COUNT] = {SELECTORS_LIST(TO_VALUE)};

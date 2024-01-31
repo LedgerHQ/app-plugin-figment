@@ -25,12 +25,13 @@ include $(BOLOS_SDK)/Makefile.defines
 #        Mandatory configuration       #
 ########################################
 # Application name
+# Will be displayed on screen by the Ethereum app
 APPNAME = "Figment"
 
 # Application version
 APPVERSION_M = 1
 APPVERSION_N = 0
-APPVERSION_P = 0
+APPVERSION_P = 1
 APPVERSION = "$(APPVERSION_M).$(APPVERSION_N).$(APPVERSION_P)"
 
 # Initialize plugin SDK submodule if needed
@@ -126,5 +127,7 @@ DISABLE_STANDARD_SNPRINTF = 1
 #DISABLE_STANDARD_USB = 1
 DISABLE_STANDARD_WEBUSB = 1
 DISABLE_STANDARD_BAGL_UX_FLOW = 1
+DISABLE_DEBUG_LEDGER_ASSERT = 1
+DISABLE_DEBUG_THROW = 1
 
 include $(BOLOS_SDK)/Makefile.standard_app
