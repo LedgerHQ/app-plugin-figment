@@ -19,7 +19,7 @@ cd plugin_dev
 Inside `plugin_dev`, clone the plugin repository (including submodules):
 
 ```shell
-git clone --recurse-submodules https://github.com/figment-networks/ledger-app-plugin
+git clone --recurse-submodules https://github.com/LedgerHQ/app-plugin-figment
 ```
 
 You can compile the plugin using a Docker image provided by Ledger.
@@ -38,7 +38,7 @@ docker run --rm -ti -v "$(realpath .):/app" ghcr.io/ledgerhq/ledger-app-builder/
 Inside the container, build the plugin by running:
 
 ```shell
-cd ledger-app-plugin
+cd app-plugin-figment
 make
 ```
 
@@ -63,14 +63,14 @@ docker run --rm -ti -v "$(realpath .):/app" ghcr.io/ledgerhq/ledger-app-builder/
 Inside the container, run the following build script:
 
 ```shell
-cd ledger-app-plugin/tests
+cd app-plugin-figment/tests
 ./build_local_test_elfs.sh
 ```
 
 Now you can exit the container and execute the tests:
 
 ```shell
-cd ledger-app-plugin/tests
+cd app-plugin-figment/tests
 yarn
 yarn test
 ```
@@ -79,19 +79,18 @@ yarn test
 
 ### Nano S
 
-![](tests/snapshots/nanos_deposit/00000.png)
-![](tests/snapshots/nanos_deposit/00001.png)
-![](tests/snapshots/nanos_deposit/00002.png)
-![](tests/snapshots/nanos_deposit/00003.png)
-![](tests/snapshots/nanos_deposit/00004.png)
-![](tests/snapshots/nanos_deposit/00005.png)
-
+![](tests/snapshots/nanos_deposit/single_validator/00000.png)
+![](tests/snapshots/nanos_deposit/single_validator/00001.png)
+![](tests/snapshots/nanos_deposit/single_validator/00002.png)
+![](tests/snapshots/nanos_deposit/single_validator/00003.png)
+![](tests/snapshots/nanos_deposit/single_validator/00004.png)
+![](tests/snapshots/nanos_deposit/single_validator/00005.png)
 
 ### Nano X
 
-![](tests/snapshots/nanox_deposit/00000.png)
-![](tests/snapshots/nanox_deposit/00001.png)
-![](tests/snapshots/nanox_deposit/00002.png)
-![](tests/snapshots/nanox_deposit/00003.png)
-![](tests/snapshots/nanox_deposit/00004.png)
-![](tests/snapshots/nanox_deposit/00005.png)
+![](tests/snapshots/nanox_deposit/single_validator/00000.png)
+![](tests/snapshots/nanox_deposit/single_validator/00001.png)
+![](tests/snapshots/nanox_deposit/single_validator/00002.png)
+![](tests/snapshots/nanox_deposit/single_validator/00003.png)
+![](tests/snapshots/nanox_deposit/single_validator/00004.png)
+![](tests/snapshots/nanox_deposit/single_validator/00005.png)
